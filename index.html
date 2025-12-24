@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thatix</title>
+    <link rel="icon" href="./assets/fabicon.png" type="image/png" />
+    <!-- Google Font (Roboto) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons (Font Awesome ) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- ================= LOADER ================= -->
+    <div id="loader">
+      <!-- <p></p> -->
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav>
+      <div class="nav-left"></div>
+
+      <!-- Center logo image  -->
+      <div class="nav-center">
+        <a href="./index.html" rel="noopener noreferrer"
+          ><img src="./assets/logo.png" alt="Logo"
+        /></a>
+      </div>
+
+      <div class="nav-right"></div>
+    </nav>
+
+    <!-- ================= HERO / BANNER ================= -->
+    <header>
+      <!-- Background image will be added using CSS -->
+
+      <h1>
+        Search Your <br />
+        Favorite Recipe
+      </h1>
+
+      <p>
+        A handful of simple ingredients typify the fresh, vibrant flavors of
+        Greek cooking
+      </p>
+    </header>
+    <!-- Search box -->
+    <section class="search-section">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search..." />
+        <button id="searchBtn">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- ================= RECIPES SECTION ================= -->
+    <main>
+      <section>
+        <h2>Latest Recipes</h2>
+        <div id="recipesLoader" class="recipes-loader hidden"></div>
+        <!-- Cards container (JS will make cards here) -->
+        <div id="recipe-container">
+          <!-- ===== Sample Card Structure (JS will repeat the card) ===== -->
+          <div class="recipe-card hover-card">
+            <div class="card-image">
+              <img src="images/sampleImg.jpg" alt="Food Image" />
+            </div>
+
+            <div class="card-content">
+              <h3>Food Title</h3>
+
+              <p>
+                This is a short description from the first three lines of the
+                instructions will come from the API.
+              </p>
+
+              <div class="card-action">
+                <button class="details-btn btn-hover">View Details</button>
+              </div>
+            </div>
+          </div>
+          <!-- ===== End Sample Card ===== -->
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= MODAL ================= -->
+    <div id="details-modal">
+      <div class="modal-content">
+        <!-- Top image -->
+        <div class="modal-image">
+          <img src="images/sample.jpg" alt="Food Image" />
+        </div>
+
+        <!-- Title -->
+        <h2>Food Title</h2>
+
+        <!-- Ingredients -->
+        <h3>Ingredients</h3>
+        <ol>
+          <li>Ingredient 1</li>
+          <li>Ingredient 2</li>
+          <li>Ingredient 3</li>
+        </ol>
+
+        <!-- Instructions -->
+        <h3>Instructions</h3>
+        <p>
+          Full cooking instructions will come from the API and be displayed in
+          pop up modal.
+        </p>
+
+        <!-- Links -->
+        <div class="modal-links">
+          <a href="#" target="_blank">YouTube</a>
+          <a href="#" target="_blank">Source</a>
+        </div>
+
+        <!-- Close button -->
+        <div class="modal-close">
+          <button>Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <p>Copyright © 2023 - All right reserved</p>
+
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollToTopBtn" class="scroll-top-btn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="./script.js"></script>
+  </body>
+</html>
