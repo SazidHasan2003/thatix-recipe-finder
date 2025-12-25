@@ -149,8 +149,17 @@ header p {
   background: #ffffff;
   border-radius: 4px;
   overflow: hidden;
-
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /*for searchbox animation*/
+}
+
+.search-box:focus-within {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(249, 168, 37, 0.4);
+}
+
+.search-box input:focus {
+  outline: none;
 }
 
 .search-box input {
